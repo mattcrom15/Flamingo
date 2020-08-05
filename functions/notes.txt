@@ -1,0 +1,15 @@
+ 
+
+move modals into seperate js file
+
+update thumbnail image to only 1 image 400px320px
+export project as csv and excel file
+
+export track layer names into text file or even JSON
+
+ability to load tracks csv file
+
+
+fix file uploads path
+
+edit projects 
