@@ -1,0 +1,270 @@
+Changelog for Project Flamingo
+
+2020-06-17 20:33:08---New image uploaded. Cover photo filename: 1_Sing_cover.png Thumbnail photo filename: 1_Sing_thumbnail.png 
+2020-06-17 20:33:40---New image uploaded. Cover photo filename: 1_Sing_cover.png Thumbnail photo filename: 1_Sing_thumbnail.png 
+2020-06-17 20:36:36---New image uploaded. Cover photo filename: 2_Kiss_cover.png Thumbnail photo filename: 2_Kiss_thumbnail.png 
+2020-06-17 20:40:19---New image uploaded. Cover photo filename: 1_Sing_cover.png Thumbnail photo filename: 1_Sing_thumbnail.png 
+2020-06-17 20:42:52---New image uploaded. Cover photo filename: 1_Sing_cover.png Thumbnail photo filename: 1_Sing_thumbnail.png 
+2020-06-17 20:43:16---New image uploaded. Cover photo filename: 3_Shake if off_cover.png Thumbnail photo filename: 3_Shake if off_thumbnail.png 
+2020-06-17 20:47:07---New image uploaded. Cover photo filename: 4_heartbeat_cover.png Thumbnail photo filename: 4_heartbeat_thumbnail.png 
+2020-06-17 20:48:58---New image uploaded. Cover photo filename: 4_heartbeat_cover.png Thumbnail photo filename: 4_heartbeat_thumbnail.png 
+2020-06-17 21:00:28---New image uploaded. Cover photo filename: 2_Kiss_cover.png Thumbnail photo filename: 2_Kiss_thumbnail.png 
+2020-06-17 21:03:02---New image uploaded. Cover photo filename: 2_Kiss_cover.png Thumbnail photo filename: 2_Kiss_thumbnail.png 
+2020-06-17 21:04:01---New image uploaded. Cover photo filename: 2_Kiss_cover.png Thumbnail photo filename: 2_Kiss_thumbnail.png 
+2020-06-18 22:34:28---Track Deleted. Trackname:  Artist: 
+2020-06-18 22:34:44---Track Deleted. Trackname:  Artist: 
+2020-06-18 22:44:52---Project Deleted. Artistname: Ed Sheeran Tourname: Divide
+2020-06-18 22:46:32---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-06-19 20:52:01---Track Deleted. Trackname: . Artist: 
+2020-06-19 20:52:20---Track Deleted. Trackname: . Artist: 
+2020-06-19 20:54:29---Track Deleted. Trackname: . Artist: 
+2020-06-19 20:54:49---Track Deleted. Trackname: . Artist: 
+2020-06-19 20:59:07---Track Deleted. Trackname: . Artist: 
+2020-06-19 20:59:45---Track Deleted. Trackname: . Artist: 
+2020-06-19 21:00:49---Track Deleted. Trackname: . Artist: 
+2020-06-19 21:06:54---Track Deleted. Trackname: Shake if off. Artist: Taylor Swift
+2020-06-19 21:43:55---Track Deleted. Trackname: heartbeat. Artist: Taylor Swift
+2020-06-19 21:46:52---Track Deleted. Trackname: Kiss. Artist: Taylor Swift
+2020-06-19 21:47:03---Project Deleted. Artistname: Taylor Swift. Tourname: Redemption
+2020-06-19 22:19:31---New image uploaded. Cover photo filename: 3_Shake if off_cover.png Thumbnail photo filename: 3_Shake if off_thumbnail.png 
+2020-06-19 22:19:51---New image uploaded. Cover photo filename: 3_Shake if off_cover.png Thumbnail photo filename: 3_Shake if off_thumbnail.png 
+2020-06-23 16:45:16---Project Deleted. Artistname: . Tourname: 
+2020-06-23 20:09:12---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-06-23 20:09:40---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-06-23 20:22:44---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-06-23 20:26:12---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-06-23 20:30:32---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-06-23 20:34:17---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-06-23 20:36:43---Track Deleted. Trackname: Sing. Artist: Ed Sheeran
+2020-06-23 20:40:03---New project created. Artistname:  Tourname: 
+2020-06-23 20:44:19---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-06-23 20:44:28---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-06-23 20:45:41---Project Deleted. Artistname: Taylor Swift. Tourname: Redemption
+2020-06-23 20:45:49---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-06-23 20:46:31---Track Deleted. Trackname: Sing. Artist: Ed Sheeran
+2020-06-23 20:46:42---Track Deleted. Trackname: <img class="track-image-src" src="/static/images/uploads/1_Sing_thumbnail.png">
+                        <h1 class="track-title" id="tracktitle">Sing</h1>
+                        
+                    . Artist: Ed Sheeran
+2020-06-23 20:58:55---Track Deleted. Trackname: Sing. Artist: Ed Sheeran
+2020-06-23 21:00:51---Track Deleted. Trackname: Sing. Artist: Ed Sheeran
+2020-06-23 21:01:25---Track Deleted. Trackname: Sing. Artist: Ed Sheeran
+2020-06-23 21:02:44---Track Deleted. Trackname: Sing. Artist: Ed Sheeran
+2020-06-23 21:03:03---Track Deleted. Trackname: Sing. Artist: Ed Sheeran
+2020-06-23 21:05:19---Track Deleted. Trackname: Sing. Artist: Ed Sheeran
+2020-06-24 13:26:05---New Track Section Created. Tracksection: Verse01 TrackID: 1
+2020-06-24 14:38:18---Track Deleted. Trackname: Sing. Artist: Ed Sheeran
+2020-06-25 14:01:23---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Completed
+2020-06-25 14:01:36---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Concept stage
+2020-06-25 14:02:46---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Completed
+2020-06-25 14:03:01---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Concept stage
+2020-06-25 14:03:07---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Concept stage
+2020-06-25 14:05:47---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Concept stage
+2020-06-25 14:06:08---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Production
+2020-06-25 14:06:30---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Ready for D3
+2020-06-25 14:07:13---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Production
+2020-06-25 14:07:59---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Waiting to start
+2020-06-25 14:08:06---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Ready for D3
+2020-06-25 14:08:12---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Production
+2020-06-25 14:08:48---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Production
+2020-06-25 14:09:19---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Production
+2020-06-25 14:10:41---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Production
+2020-06-25 14:11:07---Track section edited. Tracksection: Verse03 TrackID: 3 Status: Concept stage
+2020-06-25 14:19:00---New Track Section Created. Tracksection: Verse04 TrackID: 1
+2020-06-25 14:19:06---Track section edited. Tracksection: Verse04 TrackID: 4 Status: Completed
+2020-06-25 14:19:22---Track section edited. Tracksection: Verse04 TrackID: 4 Status: Ready for D3
+2020-06-25 14:19:48---Track section edited. Tracksection: Verse04 TrackID: 4 Status: Completed
+2020-06-25 14:20:13---Track section edited. Tracksection: Verse03 TrackID: 3 Status: Completed
+2020-06-25 14:20:19---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Completed
+2020-06-25 14:20:27---Track section edited. Tracksection: intro TrackID: 1 Status: Completed
+2020-06-25 14:20:46---Track section edited. Tracksection: intro TrackID: 1 Status: Waiting to start
+2020-06-25 14:20:54---Track section edited. Tracksection: Chorus02 TrackID: 2 Status: Concept stage
+2020-06-25 14:21:00---Track section edited. Tracksection: Verse03 TrackID: 3 Status: Production
+2020-06-25 14:21:06---Track section edited. Tracksection: Verse04 TrackID: 4 Status: Ready for D3
+2020-06-25 14:21:12---New Track Section Created. Tracksection: Chorus04 TrackID: 1
+2020-06-25 14:21:21---Track section edited. Tracksection: Chorus04 TrackID: 5 Status: Completed
+2020-06-25 16:12:00---Track section edited. Tracksection: Verse03 TrackID: 3 Status: Waiting to start
+2020-06-25 16:12:49---Track section edited.TrackID: 3 Tracksection: Verse03 Status: Production
+2020-06-25 16:13:44---Track section edited--TrackID: 3--Tracksection: Verse03--Status: Production
+2020-06-25 16:47:45---Track section Deleted. TrackID: 3 Tracksection: Verse03
+2020-06-25 16:48:11---Track section Deleted. TrackID: 3 Tracksection: Verse03
+2020-06-25 16:54:20---Track section edited. TrackID: 2 Tracksection: Chorus02 Status: Ready for D3
+2020-06-25 16:54:26---Track section edited. TrackID: 2 Tracksection: Chorus02 Status: Concept stage
+2020-06-25 17:18:43---Track section edited. TrackID: 2 Tracksection: Chorus02 Status: Ready for D3
+2020-06-25 17:20:43---New project created. Artistname: Tom Jones Tourname: Birthday Bash
+2020-06-25 17:29:39---Track section edited. TrackID: 1 Tracksection: intro Status: Concept stage
+2020-06-25 17:30:15---New Track Created. Trackname: hello ArtistID: 1
+2020-06-25 17:48:52---New project created. Artistname: Big Ben Tourname: Party
+2020-06-25 18:00:16---New project created. Artistname: Robbie Williams Tourname: HES
+2020-06-25 18:00:58---Project Deleted. Artistname: Robbie Williams. Tourname: HES
+2020-06-27 19:06:39---Track section edited. TrackID: 3 Tracksection: Verse03 Status: Waiting to start
+2020-06-27 19:08:56---Track section edited. TrackID: 3 Tracksection: Verse03 Status: Ready for D3
+2020-06-27 19:09:07---Track section edited. TrackID: 3 Tracksection: Verse03 Status: Production
+2020-06-27 19:09:14---Track section edited. TrackID: 2 Tracksection: Chorus02 Status: Waiting to start
+2020-06-27 19:14:03---Track section Deleted. TrackID: 1 Tracksection: intro
+2020-06-27 19:14:14---Track section Deleted. TrackID: 4 Tracksection: Verse04
+2020-06-27 19:21:26---New Track Section Created. Tracksection: guitar solo TrackID: 1
+2020-06-27 19:21:40---Track section edited. TrackID: 6 Tracksection: guitar solo Status: Concept stage
+2020-06-27 21:47:26---Track section Deleted. TrackID: 1 Tracksection: intro
+2020-06-27 21:49:28---Track section edited. TrackID: 1 Tracksection: intro Status: Ready for D3
+2020-06-28 21:41:14---New project created. Artistname: Ed Sheeran Tourname: Divide
+2020-06-28 21:43:00---New Track Created. Trackname: sing ArtistID: Ed Sheeran
+2020-06-28 21:43:00---New Track Created. Trackname: Shape of you ArtistID: Ed Sheeran
+2020-06-28 21:47:18---New Track Created. Trackname: Sing ArtistID: Ed Sheeran
+2020-06-28 21:47:18---New Track Created. Trackname: Shape of you ArtistID: Ed Sheeran
+2020-06-28 21:47:54---New Track Created. Trackname: sing ArtistID: Ed Sheeran
+2020-06-28 21:47:55---New Track Created. Trackname: Shape of you  ArtistID: Ed Sheeran
+2020-06-28 21:50:37---New Track Created. Trackname: SIng ArtistID: Ed Sheeran
+2020-06-28 21:50:38---New Track Created. Trackname: Shape of you ArtistID: Ed Sheeran
+2020-06-28 21:51:17---New Track Created. Trackname: Sing ArtistID: 1
+2020-06-28 21:51:17---New Track Created. Trackname: Shape of you ArtistID: 1
+2020-06-28 21:51:38---New Track Section Created. Tracksection: Intro TrackID: 9
+2020-06-28 21:51:39---New Track Section Created. Tracksection: Verse01 TrackID: 9
+2020-06-28 21:59:36---Track section edited. TrackID: 1 Tracksection: Intro Status: Production
+2020-06-29 14:04:42---New project created. Artistname: Ed Sheeran  Tourname: Divide
+2020-06-29 14:06:25---New Track Created. Trackname: Sing ArtistID: 1
+2020-06-29 14:06:25---New Track Created. Trackname: Shape of you ArtistID: 1
+2020-06-29 14:06:36---New Track Section Created. Tracksection: Intro TrackID: 1
+2020-06-29 14:06:36---New Track Section Created. Tracksection: Verse01 TrackID: 1
+2020-06-29 14:16:09---Track section edited. TrackID: 1 Tracksection: Intro Status: Production
+2020-06-30 12:53:31---New Comment Submited.
+2020-06-30 12:54:00---New Comment Submited.
+2020-06-30 12:55:35---New Comment Submited.
+2020-06-30 13:06:00---New Comment Submited.
+2020-06-30 13:06:24---New Comment Submited.
+2020-06-30 13:57:48---New Comment Submited. track:Intro comment:This is my comment. update Notch.
+2020-06-30 14:48:42---New Track Section Created. Tracksection: Chorus01 TrackID: 1
+2020-06-30 15:01:06---New Comment Submited. track:Intro comment:This is my Second comment.sort you shit out.
+2020-06-30 15:27:49---Pending Review. track:Sing
+2020-06-30 15:27:53---Pending Review. track:Sing
+2020-06-30 15:28:12---Pending Review. track:Sing
+2020-06-30 15:29:35---Pending Review. track:Sing
+2020-06-30 15:29:40---Pending Review. track:Sing
+2020-06-30 15:29:54---Pending Review. track:Sing
+2020-06-30 15:33:49---Pending Review. track:Sing
+2020-06-30 15:35:10---Track section edited. TrackID: 1 Tracksection: Intro Status: Completed
+2020-06-30 15:35:16---Track section edited. TrackID: 2 Tracksection: Verse01 Status: Completed
+2020-06-30 15:35:22---Track section edited. TrackID: 3 Tracksection: Chorus01 Status: Completed
+2020-06-30 15:51:33---New project created. Artistname: Ed Sheeran Tourname: Divide
+2020-06-30 15:51:42---New Track Created. Trackname: Sing ArtistID: 1
+2020-06-30 15:52:51---New Track Section Created. Tracksection: Verse01 TrackID: 1
+2020-06-30 15:52:59---New Layer created. Layer: Background Extension: .Mov Alpha:0 Version: 1
+2020-06-30 15:53:09---New Comment Submited. track:Verse01 comment:This is a comment.
+2020-06-30 15:53:17---Layer Updated. Layer: Mask Extension: .Mov Alpha:0 Version: 1
+2020-06-30 15:53:23---Track section edited. TrackID: 1 Tracksection: Verse01 Status: Ready for D3
+2020-06-30 15:53:26---Pending Review. track:Sing
+2020-06-30 15:53:29---Pending Review. track:Sing
+2020-06-30 16:09:46---New project created. Artistname: Ed Sheeran Tourname: Divide
+2020-06-30 16:10:02---New Track Created. Trackname: Sing ArtistID: 1
+2020-07-04 11:30:18---New Track Section Created. Tracksection: Intro TrackID: 1
+2020-07-04 11:30:26---New Layer created. Layer: Background Extension: .Mov Alpha:0 Version: 1
+2020-07-06 13:44:53---New Track Section Created. Tracksection: Verse01 TrackID: 1
+2020-07-06 13:45:09---New Comment Submited. track:Verse01 comment:This is my comment for verse01
+
+2020-07-10 14:33:25---New Comment Submited. track:Verse01 comment:This is my comment for verse01
+2020-07-10 14:59:54---New Comment Submited. track:Verse01 comment:This is my comment for verse01
+2020-07-10 15:11:11---Comment Edited. track:Verse01 comment:This is my comment for verse01.this is edited.
+2020-07-10 15:11:22---Comment Edited. track:Verse01 comment:This is my comment for verse01.
+2020-07-10 15:14:29---Track section Deleted. TrackID: 2 Tracksection: Verse01
+2020-07-10 16:19:36---Track section edited. TrackID: 1 Tracksection: Intro Status: Ready for D3
+2020-07-10 16:40:56---Pending Review. track:Sing
+2020-07-10 16:40:57---Pending Review. track:Sing
+2020-07-10 16:52:19---Track Deleted. Trackname: Sing. Artistid: 1
+2020-07-10 16:56:37---Track section Deleted. TrackID: 1 Tracksection: Intro
+2020-07-10 17:15:35---Track section Deleted. TrackID: 1 Tracksection: Intro
+2020-07-10 17:26:14---New Layer created. Layer: Background Extension: .Mov Alpha:0 Version: 1
+2020-07-10 17:26:21---New Comment Submited. track:Intro comment:new com,ment.
+2020-07-10 17:26:26---Track section Deleted. TrackID: 1 Tracksection: Intro
+2020-07-10 17:33:51---Track Deleted. Trackname: Sing. Artistid: 1
+2020-07-10 17:34:43---New Track Section Created. Tracksection: Intro TrackID: 1
+2020-07-10 17:34:43---New Track Section Created. Tracksection: Verse01 TrackID: 1
+2020-07-10 17:34:43---New Track Section Created. Tracksection: Chorus01 TrackID: 1
+2020-07-10 17:34:47---Track Deleted. Trackname: Sing. Artistid: 1
+2020-07-10 17:36:04---Track Deleted. Trackname: Sing. Artistid: 1
+2020-07-10 17:36:23---New Track Section Created. Tracksection: Intro TrackID: 1
+2020-07-10 17:36:23---New Track Section Created. Tracksection: Verse01 TrackID: 1
+2020-07-10 17:36:23---New Track Section Created. Tracksection: Chorus01 TrackID: 1
+2020-07-10 17:36:28---New Layer created. Layer: Background Extension: .Mov Alpha:0 Version: 12
+2020-07-10 17:36:33---New Layer created. Layer: Background Extension: .Mov Alpha:0 Version: 1
+2020-07-10 17:36:57---New Comment Submited. track:Verse01 comment:this is comment.
+2020-07-10 17:38:37---Track Deleted. Trackname: Sing. Artistid: 1
+2020-07-10 17:46:26---Track Deleted. Trackname: Sing. Artistid: 1
+2020-07-10 17:47:15---Track Deleted. Trackname: Sing. Artistid: 1
+2020-07-10 17:49:50---New Track Created. Trackname: Shape of you ArtistID: 1
+2020-07-10 18:02:55---New Track Created. Trackname: COTH ArtistID: 1
+2020-07-10 18:02:55---New Track Created. Trackname: Eraser ArtistID: 1
+2020-07-10 18:02:55---New Track Created. Trackname: A-team ArtistID: 1
+2020-07-10 18:02:55---New Track Created. Trackname: BloodStream ArtistID: 1
+2020-07-10 18:02:55---New Track Created. Trackname: Dont/Newman ArtistID: 1
+2020-07-10 18:02:55---New Track Created. Trackname: I See Fire ArtistID: 1
+2020-07-10 18:16:56---Track Deleted. Trackname: COTH. Artistid: 1
+2020-07-10 18:28:27---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-07-10 18:30:42---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-07-10 18:32:08---New project created. Artistname: Ed Sheeran Tourname: Divide
+2020-07-10 18:32:19---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-07-10 18:33:09---New project created. Artistname: Taylor Swift Tourname: Redemption
+2020-07-10 18:33:27---Project Deleted. Artistname: Taylor Swift. Tourname: Redemption
+2020-07-10 18:33:48---New project created. Artistname: Ed Sheeran Tourname: Divide
+2020-07-10 18:46:04---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-07-10 18:52:38---New project created. Artistname: Ed Sheeran Tourname: Divide
+2020-07-10 18:52:48---New project created. Artistname: Taylor Swift Tourname: Redemption
+2020-07-12 17:11:08---New Track Created. Trackname: COTH ArtistID: 5
+2020-07-12 17:11:08---New Track Created. Trackname: Eraser ArtistID: 5
+2020-07-12 17:11:08---New Track Created. Trackname: A-team ArtistID: 5
+2020-07-12 17:12:04---New Track Section Created. Tracksection: Intro TrackID: 9
+2020-07-12 17:48:48---New Layer created. Layer: Background Extension: .Png Alpha:0 Version: 1
+2020-07-12 17:49:07---Layer Updated. Layer: Background Extension: .Mov Alpha:0 Version: 1
+2020-07-15 23:28:17--- Track Edited. Trackname: This is a song TracknameID: 9 Description: Song description Tracklength: 02:32:13 Assigned to: Matt
+2020-07-15 23:33:38---New project created. Artistname: Ed Sheeran Tourname: Divide
+2020-07-15 23:33:45---New Track Created. Trackname: Sing ArtistID: 1
+2020-07-15 23:34:38--- Track Edited. Trackname: Shape of you TracknameID: 1 Description: 3D zoetrope Tracklength: 0:01:25:00 Assigned to: Nobody assigned
+2020-07-16 14:29:32--- Track Edited. Trackname: Shape of you TracknameID: 1 Description: 3D zoetrope Tracklength: 0:01:25:00 Assigned to: Matt
+2020-07-16 14:36:42--- Track Edited. Trackname: Shape of you TracknameID: 1 Description: concrete crumbles to reveal 3D tree. Tracklength: 0:01:25:00 Assigned to: Matt
+2020-07-16 14:38:14---Track Deleted. Trackname: Shape of you. Artistid: 1
+2020-07-16 16:37:31---Project Updated. Artistname: Ed Sheeran Tourname: Divide Deadline:15th April 2021 Resolution:2600x4056 Framerate:25
+2020-07-16 16:38:36---Project Updated. Artistname: Ed Sheeran Tourname: Divide Deadline:16th July 2020 Resolution:2500x4224 Framerate:30
+2020-07-16 16:39:14---Project Updated. Artistname: Ed Sheeran Tourname: Divide Deadline:03th July 2020 Resolution:2500x4224 Framerate:30
+2020-07-16 16:40:04---Project Updated. Artistname: Ed Sheeran Tourname: Divide Deadline:02th July 2020 Resolution:2500x4224 Framerate:30
+2020-07-16 16:41:13---Project Updated. Artistname: Ed Sheeran Tourname: Divide Deadline:02 July 2020 Resolution:2500x4224 Framerate:30
+2020-07-16 16:41:44---Project Updated. Artistname: Ed Sheeran Tourname: Divide Deadline:13 July 2020 Resolution:2500x4224 Framerate:30
+2020-07-16 16:42:13---Project Updated. Artistname: Ed Sheeran Tourname: Divide Deadline:13 July 2020 Resolution:2500x4224 Framerate:30
+2020-07-16 16:42:30---New project created. Artistname: Taylor Swift Tourname: Reputation
+2020-07-16 16:46:04---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-07-16 16:46:32---New project created. Artistname: Taylor Swift Tourname: Reputation
+2020-07-16 16:47:10---New project created. Artistname: Robbie Williams Tourname: Heavy Entertainment Show
+2020-07-16 16:49:28---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-07-16 16:50:10---Project Deleted. Artistname: Ed Sheeran. Tourname: Divide
+2020-07-16 16:50:27---New project created. Artistname: Taylor Swift Tourname: Redemption
+2020-07-16 16:53:31---New project created. Artistname: rw Tourname: HEs
+2020-07-16 16:55:48---Project Deleted. Artistname: rw . Tourname:  HEs
+2020-07-16 16:55:52---Project Deleted. Artistname: Taylor Swift . Tourname:  Redemption
+2020-07-16 17:28:47---New Track Created. Trackname: Sing ArtistID: 1
+2020-07-16 17:29:24--- Track Edited. Trackname: Sing TracknameID: 2 Description: 3D Zoetrope Tracklength: 0:02:25:30 Assigned to: Matt
+2020-07-16 17:31:55---New Track Section Created. Tracksection: Intro TrackID: 2
+2020-07-16 17:31:55---New Track Section Created. Tracksection: Verse01 TrackID: 2
+2020-07-16 17:33:15---Track section edited. TrackID: 1 Tracksection: Intro Status: Ready for D3
+2020-07-17 14:52:11---New Track Created. Trackname: A team ArtistID: 1
+2020-07-17 15:03:49---New image uploaded. Trackid: 2 Trackname: Sing Cover photo filename: 2_Sing_cover.png
+2020-07-17 15:04:58---New image uploaded. Trackid: 2 Trackname: Sing Cover photo filename: 2_Sing_cover.png
+2020-07-17 15:05:32---New image uploaded. Trackid: 2 Trackname: Sing Cover photo filename: 2_Sing_cover.png
+2020-07-17 15:07:29---New image uploaded. Trackid: 2 Trackname: Sing Cover photo filename: 2_Sing_cover.png
+2020-07-17 15:09:27---New image uploaded. Trackid: 2 Trackname: Sing Cover photo filename: 2_Sing_cover.png
+2020-07-17 15:13:35---New Track Created. Trackname:  ArtistID: 1
+2020-07-17 15:13:59---New Track Created. Trackname: Twat ArtistID: 1
+2020-07-17 15:14:41---New image uploaded. Trackid: 5 Trackname: Twat Cover photo filename: 5_Twat_cover.png
+2020-07-17 15:15:17---Track Deleted. Trackname: . Artistid: 1
+2020-07-19 10:45:16---Track Deleted. Trackname: Twat. Artistid: 1
+2020-07-19 10:46:53---Track Deleted. Trackname: Twat. Artistid: 1
+2020-07-19 10:47:08---Track Deleted. Trackname: Twat. Artistid: 1
+2020-07-19 10:47:26---Track Deleted. Trackname: Twat. Artistid: 1
+2020-07-19 10:47:54---Track Deleted. Trackname: Twat. Artistid: 1
+2020-07-19 10:50:31---Track Deleted. Trackname: Twat. Artistid: 1
+2020-07-19 10:54:13---Track Deleted. Trackname: Twat. Artistid: 1
+2020-07-19 10:54:21---Track Deleted. Trackname: Sing. Artistid: 1
+2020-07-19 10:54:29---Project Deleted. Artistname: Ed Sheeran . Tourname:  Divide
+2020-07-19 10:59:18---New project created. Artistname: Ed Sheeran Tourname: Divide
+2020-07-19 11:03:32---New Track Created. Trackname: Sing ArtistID: 7
+2020-07-19 11:18:40---New Track Created. Trackname: Shape of you ArtistID: 7
+2020-07-19 11:18:59---New image uploaded. Trackid: 7 Trackname: Shape of you Cover photo filename: 7_Shape of you_cover.png
+2020-07-19 11:24:44---New Track Section Created. Tracksection: Intro TrackID: 6
+2020-07-20 15:05:25---New image uploaded. Trackid: 6 Trackname: Sing Cover photo filename: 6_Sing_cover.png
