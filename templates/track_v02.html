@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{t[2]}}</title>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename="styles/styles.css") }}>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap' rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">
+            <div class="ham"></div>
+            <div class="ham"></div>
+            <div class="ham"></div>
+        </div>
+        <div class ="side-menu">
+        <ul  class = "side-menu-items">
+            <li class="side-menu-item"><a class ="sma" href = "{{ url_for('home') }}">Home</a></li>
+            <li class="side-menu-item"><a class ="sma" href = "{{ url_for('index') }}">Projects</a></li>
+        </ul>
+        </div>
+        <div class = "pr-toggle">
+                <button class = "create_track_btn">Submit Track for Review</button>
+        </div>
+    </header>
+    <div class = "dashboard-top" id = "trackid" trackid='{{t[0]}}'>
+    	<div class = "img-section">
+            <img class ="track-cover-photo" src="{{ url_for('static', filename= "images/uploads/" + t[8]) }}">
+            <div class ="info-over-images">
+                <h1 class = "track-title" id='tracktitle'>{{t[2]}}</h1>
+                {% if t[6] == 1 %}
+                         <h2 class = "pr-track">PENDING REVIEW</h2>
+                {% endif%}
+                <div class= "threedots-track-main" id="threedots" onclick = "createCoverPhoto(this);">...</div>
+
+            </div>
+    	</div>
+    </div>
+    <div class = "main-track-info">
+        <div class = "track-section-01">
+            <div class = "track-clips">
+                <div class ="ts-top">
+                    <h1 class = "ts-title"> Track Sections</h1>
+                    <img src ="{{ url_for('static', filename="icon/file-plus.svg") }}" height="28" width="28" class="add_section_ico" onclick ="NewTrackSectionModal();">
+                </div>
+                <div class ="track-section-items">
+                        {% for ts in tracksections %}
+                        {% if ts[3] == "Completed" %}
+                        <div class ="track-section-item-complete" progress = "{{ts[4]}}" tracksecid = "{{ts[0]}}" id = "track-section-item-{{ts[0]}}" onclick = "tsproperties(this);">
+                        {% else %}
+                        <div class ="track-section-item" progress = "{{ts[4]}}" tracksecid = "{{ts[0]}}" id = "track-section-item-{{ts[0]}}" onclick = "tsproperties(this);">
+                        {% endif %}
+                            <div class = "ts-text">
+                                <h3 class ="ts-name">{{ts[2]}}</h3>
+                                <h3 class ="ts-status">Status: <span class="ts-status-span">{{ts[3]}}</span></h3>
+                            </div>
+                            <div class = "ts-slider" progress = "{{ts[4]}}">
+                                <div class = "slider-border" id="slider-progress">
+                                    <div class = "slider-1" style = "width: {{ts[4]}}%;" ></div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class = "track-section-01">
+            <div class = "track-info-comments">
+                <div class ="sec1">
+                    <h1>Verse01</h1>
+                    <h2>Status</h2>
+                    <div class="progress-dropdown">
+                            <div class = "dropdown-top-section">
+                                <h3 class = "edit-status" id= "edit-status">placeholder text</h3>
+                                <img src ="{{ url_for('static', filename="icon/chevron-down.svg") }}" height="28" width="28" class="dropdown-chevron" onclick = "openDropdown();">
+                             </div>
+
+                            <div class="dropdown-content">
+                                <p class="dropdown-content-item" onclick="getname(this);">Waiting to start</p>
+                                <p class="dropdown-content-item" onclick="getname(this);">Concept stage</p>
+                                <p class="dropdown-content-item" onclick="getname(this);">In Production</p>
+                                <p class="dropdown-content-item" onclick="getname(this);">Ready for D3</p>
+                                <p class="dropdown-content-item" onclick="getname(this);">Completed</p>
+                            </div>
+                        </div>
+                    <h3>Video Layers</h3>
+                    <button class="add_section" type="submit">+</button>
+                    <button class="remove_section" type="submit">-</button>
+                    <div class= "vl-sections">
+                        <p>Background</p>
+                        <p>Overlay</p>
+                        <p>Mask</p>
+                        <p>UV</p>
+                        <p>AO / shadow</p>
+                    </div>
+
+                </div>
+                <div class = "sec2">
+                    <div class = "comments-section">
+                    <div class = "comments-box">
+                        <h1>Comments</h1>
+                        <div class = "comments-items">
+                            <div class = "comment-item">
+                                <div class = "text">
+                                    <h3>verse01</h3>
+                                    <p>update imag status</p>
+                                </div>
+                                <div class = "avatar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class = "new_track_section_dialog_modal">
+            <div class = "new_track_section_dialog" id="npd">
+                <div class = "close_btn" id="close_btn_nts_modal">+</div>
+                <h1 class = "nts_title">New Track Section</h1>
+                        <p id ="total-sections-added"> 1/10</p>
+                        <button class="add_section" type="submit" onclick="add_track_section();">+</button>
+                        <button class="remove_section" type="submit" onclick="delete_new_track_section();" >-</button>
+                        <ul class = "section-inputs" id="section-inputs">
+                        <input class = "ts-input" type="text" name="section-name" id="tsname"autocomplete="off" placeholder="Track Section">
+                        </ul>
+                        <button class="create_track_btn" type="submit" onclick="create_track_section();">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src = "{{ url_for('static', filename="js/script.js") }}" ></script>
+    <script src = "{{ url_for('static', filename="js/hamburger.js") }}" ></script>
+    <script src = "{{ url_for('static', filename="js/tracks.js") }}" ></script>
+</body>
+</html>

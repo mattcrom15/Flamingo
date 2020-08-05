@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{t[2]}}</title>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename="styles/styles.css") }}>
+    <link rel="stylesheet" href="{{ url_for('static', filename="styles/croppie.css") }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon/Flamingo.ico') }}">
+</head>
+<body>
+    <div style="display: flex;">
+        <div style=" padding-left: 12.5%; width:100%;">
+            <header>
+                <ul class="breadcrumb">
+                    <li><a href = "{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('index') }}">Projects</a></li>
+                    <li><a href="{{ url_for('project')}}?artistid={{a[0]}}">{{a[1]}}</a></li>
+                    <li>{{t[2]}}</li>
+                  </ul>
+            </header>
+            <div style="display: flex;  padding-top: 20px; background: white; height:210px;" id="artistid" artistid = "{{a[0]}}">
+                <section>
+                    <h1 style="font-size: 60px; padding-left: 45px; margin-right:25px;" id='trackid' trackid = "{{t[0]}}" >{{t[2]}}</h1>
+                    <p style="font-size: 40px; padding-left: 45px; margin:0;">{{a[1]}}</p>
+                    <p style="padding-left: 45px;" id="desc">{{t[9]}}</p>
+                </section>
+                <section style="padding-top: 40px; margin-right:15%;">
+                    <div style="display:flex; margin-bottom:101px;">
+                        <img src ="{{ url_for('static', filename="icon/edit.svg") }}" height="24" width="24" class="section-ico" title=" Edit Track" onclick="EditTrackModal();">
+                        <img src ="{{ url_for('static', filename="icon/image.svg") }}" height="24" width="24" class="section-ico" title=" Cove Photo" onclick="CoverPhotoModal();">
+                        <img src ="{{ url_for('static', filename="icon/download.svg") }}" height="24" width="24" class="section-ico" title="Export Track">
+                        <img src ="{{ url_for('static', filename="icon/trash.svg") }}" height="24" width="24" class="section-ico" kind="trackd" title="Delete Track" onclick="DeleteModal(this);"> 
+                        {%if t[6] == 0%}
+                        <div class="pr-box" pending="false">
+                            <div class="pr-circle" title="Submit for Review" onclick="PendingReview();"></div>
+                        </div>
+                        {%else%}
+                        <div class="pr-box" style="background: #F61067;"pending="true">
+                            <div class="pr-circle" style="transform: translateX(30px);" title="Submit for Review" onclick="PendingReview();"></div>
+                        </div>
+                        {%endif%}
+                    </div>
+                </section>
+                <section style="padding-top: 40px; margin-right:5%;">
+                    <div>
+                        <div style="display: flex;">
+                            <img src ="{{ url_for('static', filename="icon/film.svg") }}" height="24" width="24" style="margin-right: 5px;">
+                            <h2>Tracklength</h2>
+                        </div>
+                        <p style="padding-left:30px;" id="tlength">{{t[10]}}</p>
+                    </div>
+                    <div>
+                        <div style="display: flex;">
+                            <img src ="{{ url_for('static', filename="icon/smile.svg") }}" height="24" width="24" style="margin-right: 5px;">
+                            <h2>Assigned</h2>
+                        </div>
+                        <p style="padding-left:30px;" id="assign">{{t[5]}}</p>
+                    </div>
+                </section>
+                <section style="padding-top: 40px;">
+                    {% if t[3] =='High'%}
+                    <div class = "priority-box-h">
+                    {% elif t[3] == 'Medium'%}
+                    <div class = "priority-box-m">
+                    {% else %}
+                    <div class = "priority-box-l">
+                    {% endif %}
+                        <div class ="p-box">
+                                <p><span id = "pstatus">{{t[3]}}</span> Priority</p>
+                                <img src ="{{ url_for('static', filename="icon/chevron-down.svg") }}" height="28" width="28" class="pdropdown-chevron" onclick ="openPDropdown();" menu="closed">
+                        </div> 
+                    </div>
+                    <div class ="p-dropdown">
+                            <p class="p-dropdown-item-1"onclick="priname(this);">Low</p>
+                            <p class="p-dropdown-item-2"onclick="priname(this);">Medium</p>
+                            <p class="p-dropdown-item-3"onclick="priname(this);">High</p>
+                    </div>
+                </section>
+               <img src="{{ url_for('static', filename="images/uploads/" + t[8]) }}">
+            </div>
+            <div class = "main-track-info">
+                    <div class = "track-clips">
+                        <div style="display: flex;  padding-top: 40px; align-items: center; background: white; padding-left: 20px;" >
+                            <h1 style="font-size: 48px; padding-left: 20px; margin-right:25px;">Sections</h1>
+                            <button class="new_project" onclick="NewTrackSectionModal();">New Section</button>
+                        </div>
+                        <div class ="track-section-items">
+                                {% for ts in tracksections %}
+                                <div id="ts-item" style="height: 44px;">
+                                    <div style="display: flex;">
+                                        {% if ts[3] == "Completed" %}
+                                        <div class ="track-section-item-complete" progress = "{{ts[4]}}" tracksecid = "{{ts[0]}}" id = "track-section-item-{{ts[0]}}" menu="menu-closed" kind="section" onclick = "tsproperties(this);">
+                                        {% else %}
+                                        <div class ="track-section-item" progress = "{{ts[4]}}" tracksecid = "{{ts[0]}}" id = "track-section-item-{{ts[0]}}" menu="menu-closed" onclick = "tsproperties(this);">
+                                        {% endif %}
+                                            <h3 class ="ts-name">{{ts[2]}}</h3>
+                                            <div class = "ts-slider" progress = "{{ts[4]}}">
+                                                <div class = "slider-border" id="slider-progress">
+                                                    {%if ts[4] == 0 %}
+                                                    <div class = "ts-slider01" style = "width: {{ts[4]}}% " ></div>
+                                                    {% elif ts[4] == 25 %}
+                                                    <div class = "ts-slider02" style = "width: {{ts[4]}}% " ></div>
+                                                    {% elif ts[4] == 50 %}
+                                                    <div class = "ts-slider03" style = "width: {{ts[4]}}% " ></div>
+                                                    {% elif ts[4] == 75 %}
+                                                    <div class = "ts-slider04" style = "width: {{ts[4]}}% " ></div>
+                                                    {% else %}
+                                                    <div class = "slider-1" style = "width: {{ts[4]}}% " ></div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <p class="slider-progress">{{ts[4]}}%</p>
+                                            {%if ts[4] == 0 %}
+                                            <h3 class ="ts-status01" id="ts-status">{{ts[3]}}</h3>
+                                            {% elif ts[4] == 25 %}
+                                            <h3 class ="ts-status02" id="ts-status">{{ts[3]}}</h3>
+                                            {% elif ts[4] == 50 %}
+                                            <h3 class ="ts-status03" id="ts-status">{{ts[3]}}</h3>
+                                            {% elif ts[4] == 75 %}
+                                            <h3 class ="ts-status04" id="ts-status">{{ts[3]}}</h3>
+                                            {% else %}
+                                            <h3 class ="ts-status05" id="ts-status">{{ts[3]}}</h3>
+                                            {% endif %}
+
+                                            <div style="display: flex; margin:auto 0; padding-left: 25px;">
+                                                <img src ="{{ url_for('static', filename="icon/edit.svg") }}" height="24" width="24" class="section-ico" title="Edit Section" onclick="EditSectionModal(this);">
+                                                <img src ="{{ url_for('static', filename="icon/download.svg") }}" height="24" class="section-ico" width="24" title="Export Section" onclick="ExportSection(this);">
+                                                <img src ="{{ url_for('static', filename="icon/trash.svg") }}" height="24" width="24" class="section-ico" title="Delete Section" kind="section" onclick="DeleteModal(this);">
+                                            </div>
+                                    </div>
+
+                
+                                </div>
+                                </div>
+                                {% endfor %}
+                        </div>
+
+                    </div>
+                    <div style="padding:15px; width:40%;">
+                        <div style="background: white; height:100%;">
+                            <div style="text-align: center;  padding-top: 40px; justify-content:center;">
+                                <h1 style="font-size: 48px;" id=lc-name tsid =""></h1>
+                                <div class = "slider-border-lc" id="slider-progress" style="width:60%;">
+                                    <div class = "slider-lc" ></div>
+                                </div>
+                                <p>Select a section on the left to view it's layers and comments.</p>
+                            </div>
+                                <div style="margin: auto 0; margin-bottom: 25px;">
+                                    <ul style="display: flex; justify-content:center; padding:0; margin:0;">
+                                        <li class="sl-active" id="l" select="true" onclick="layerCommentSwitch(this);">Layers</li>
+                                        <div class="divider" ></div>
+                                        <li class="sl-inactive" id="c" select="false" onclick="layerCommentSwitch(this);">Comments</li>
+                                    </ul>
+                                    <div class="lc-selector"></div>
+                                </div>
+                            <div style="overflow:hidden;">
+                                <div id="lc-section" class="boxMenu" style ="display: flex; width: 200%; transform:translateX(0px); overflow:auto;">
+                                    <div style="width: 100%; height:100%; padding:15px;">
+                                        <div style="display: flex;  padding-top: 40px; align-items: center;" >
+                                            <h1 style="font-size: 48px; padding-left: 45px; margin-right:25px;">Layers</h1>
+                                            <button class="new_project_disabled" id="newlayer" kind="create" onclick="NewLayerModal(this);">New Layer</button>
+                                        </div>
+                                        <div id="layer-items" class="layer-items-list">
+                                            <div class="no-layers">
+                                                <p>No layers Created. Click on "New Layer" to create a layer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; height:100%; padding:15px;">
+                                        <div style=" padding-top: 40px; align-items: center;" >
+                                            <div style="display: flex; align-items: center;">
+                                                <h1 style="font-size: 48px; padding-left: 45px; margin-right:25px;">Comments</h1>
+                                                <button class="new_project_disabled" id="newcomment" status="new" onclick=" NewCommentDialog(this);">New Comment</button>
+                                            </div>
+                                            <div class="comment-items">
+                                                <div class="no-layers">
+                                                    <p>No comments Created. Click on "New Comment" to create a comment.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class ="side-menu">
+            <ul  class = "side-menu-items">
+                <img src="{{ url_for('static', filename='icon/Flamingo.ico') }}" alt="Flamingo-logo">
+                <li class="side-menu-item"><a class ="sma" href = "{{ url_for('home') }}">Home</a></li>
+                <li class="side-menu-item"><a class ="sma" href = "{{ url_for('index') }}">Projects</a></li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+    <div class="section-layer-dialog-modal" style="display: none; opacity: 0;"> 
+        <div class="section-layer-dialog" id="sectionLayer"  kind="create">
+            <div class = "close_btn" onclick="closeSL();">+</div>
+            <h3 id="sl-title">New Layer Type</h3>
+            <p id="layer-sectionname" sectionid="" layerid=""></p>
+            <div class="new-layer-item">
+                <h3>Layer Type</h3>
+                <h3>File extension</h3>
+                <h3>Alpha</h3>
+                <h3>Version Number</h3>
+                <div>
+                    <div class= "layer-selected">
+                        <p id="layertype">Background</p>
+                        <img src ="{{ url_for('static', filename="icon/chevron-down.svg") }}" height="28" width="28" class="ldropdown-chevron" onclick ="openLayerDropdown();" menu="closed">
+                    </div>
+                    <div class="layer-selections">
+                        <p class="layer-type" onclick = "layerType(this);">Background</p>
+                        <p class="layer-type" onclick = "layerType(this);">Mask</p>
+                        <p class="layer-type" onclick = "layerType(this);">Overlay</p>
+                        <p class="layer-type" onclick = "layerType(this);">UV</p>
+                        <p class="layer-type" onclick = "layerType(this);">AO</p>
+                    </div>
+                </div>
+                <div>
+                    <div class= "ext-selected">
+                        <p id="exttype">Mov</p>
+                        <img src ="{{ url_for('static', filename="icon/chevron-down.svg") }}" height="28" width="28" class="extdropdown-chevron" onclick ="openExtDropdown();" menu="closed">
+                    </div>
+                    <div class="ext-selections">
+                        <p class="ext-type" onclick = "ExtType(this);">.Mov</p>
+                        <p class="ext-type" onclick = "ExtType(this);">.Jpg</p>
+                        <p class="ext-type" onclick = "ExtType(this);">.Png</p>
+                    </div>
+                </div>
+                <div class="has-alpha">
+                    <input type="checkbox" id="alpha" style="width: 18px; height: 18px;">
+                </div>
+                <div class="version-number">
+                    <input type="text" id="vnum">
+                </div>
+            </div>
+            <button class="createupdatelayerbtn" onclick="createSectionLayer();">Create Layer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "upload-cover-photo-modal">
+    <div class = "upload-cover-photo-dialog" id="ucp">
+        <div class = "close_btn" id="close_btn_ucp_modal">+</div>
+        <h1>Upload cover photo</h1>
+        <label class="custom-file-label" for="image">Select image...</label>
+        <input type="file" class="image-select-btn" name="image" id="imagefile">
+        <div class="croppy-container" id="cbox" style="height: auto;"></div>
+    </div>
+</div>
+<div class = "delete_dialog_modal">
+    <div class = "delete_dialog">
+        <img src ="{{ url_for('static', filename="icon/alert-circle.svg") }}" height="40" width="40" class="del-alert-img">
+        <h1 class = "delete_title">Delete Section</h1>
+        <h2 id="dkind" kind="" aid="" tid="" tsid="" lid="" cid="" style="text-align: center"></h2>
+                <p class = "delete_msg"></p>
+                <div class = "btns">
+                    <button class="delete_btn" type="submit" onclick="DeleteElements();" >Delete</button>
+                    <button class="cancel_btn" type="cancelbtn" onclick="closeDelSecModal();" >Cancel</button>
+                </div>
+    </div>
+</div>
+<div class = "edit_section_dialog_modal">
+    <div class = "edit_section_dialog">
+        <div class = "close_btn" id="close_btn_esd_modal" onclick="closeEditSectionModal();">+</div>
+        <h1 class = "delete_title" sectionid="">Edit <span id='sectionname'></span> Section</h1>
+        <h3>Rename Section</h3>
+        <input type="text" class="ts-input" id="renamesection">
+        <div class="section-layer-types">
+            <h3>Section progress</h3>
+            <div class="section-status-update">
+                <p class= "section-selected" id="sectiontype">Concept stage</p>
+                <img src ="{{ url_for('static', filename="icon/chevron-down.svg") }}" height="28" width="28" menu="closed" class="st-chevron" onclick="SectionTypeDropdown();">
+            </div>
+            <div class="section-selections">
+                <p class="section-type" onclick = "SectionType(this);">Waiting to start</p>
+                <p class="section-type" onclick = "SectionType(this);">Concept stage</p>
+                <p class="section-type" onclick = "SectionType(this);">Production</p>
+                <p class="section-type" onclick = "SectionType(this);">Ready for D3</p>
+                <p class="section-type" onclick = "SectionType(this);">Completed</p>
+            </div>
+        </div>
+                <div class = "btns">
+                    <button class="delete_btn" type="submit" onclick="EditSection();" >Submit</button>
+                </div>
+    </div>
+</div>
+
+    <div class ="new-comment-dialog-modal">
+        <div class="new-comment-dialog" status="">
+            <div class = "close_btn" id="close_btn_nc_modal">+</div>
+            <h1 class="comment-header">New Comment</h1>
+            <h2 class="comment-subheader" sectionid="" commentid></h2>
+            <textarea class="comment-box"  name="comment" id="commentbox" maxlength="100"></textarea>
+            <div class="comments-dialog-bottom">
+                <p class="totalchar">0/100</p>
+                <button class="comment_btn" type="submit" onclick="submitNewComment();">Send</button>
+            </div>
+        </div>
+    </div>
+    <div class = "new_track_section_dialog_modal">
+        <div class = "new_track_section_dialog" id="npd">
+            <div class = "close_btn" id="close_btn_nts_modal">+</div>
+            <h1 class = "nts_title">New Track Section</h1>
+                    <p id ="total-sections-added"> 1/10</p>
+                    <button class="add_section" type="submit" onclick="add_track_section();">+</button>
+                    <button class="remove_section" type="submit" onclick="delete_new_track_section();" >-</button>
+                    <ul class = "section-inputs" id="section-inputs">
+                    <input class = "ts-input" type="text" name="section-name" id="tsname"autocomplete="off" placeholder="Track Section">
+                    </ul>
+                    <button class="create_track_btn" type="submit" onclick="create_track_section();">Submit</button>
+        </div>
+    </div>
+    <div class="edit-track-dialog-modal">
+        <div class="edit-track-dialog">
+            <div class = "close_btn" id="close_btn_et_modal">+</div>
+            <h1 style="margin-bottom: 15px;">Edit <span id="et-ttitle" etid="{{t[0]}}">trackname</span></h1>
+            <h3 style="margin-bottom: 5px;">Trackname</h3>
+            <input class="et-input" type="text" name="track-title" id="et-track-title">
+            <h3 style="margin-bottom: 5px;">Track description</h3>
+            <textarea class="desc-box" name="" id="desc-box" maxlength="100"></textarea>
+            <h3 style="margin-bottom: 5px;">Tracklength</h3>
+            <input class="et-input" style="width: 25%;"="text" name="Tracklength" id="Tracklength">
+            <h3 style="margin-bottom: 5px;">Assigned</h3>
+            <input class="et-input" type="text" name="Assigned" id="Assigned">
+            <button class="create_track_btn" type="submit" onclick="SubmitTrackEdits();">Submit</button>
+        </div>
+    </div>
+
+
+       
+    <script src = "{{ url_for('static', filename="js/script.js") }}" ></script>
+    <script src = "{{ url_for('static', filename="js/tracks.js") }}" ></script>
+    <script src = "{{ url_for('static', filename="js/uploadimage.js") }}" ></script>
+    <script src = "{{ url_for('static', filename="js/modals.js") }}" ></script>
+    <script src="{{ url_for('static', filename="js/croppie.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/matt_crop.js") }}"></script>
+
+</body>
+</html>

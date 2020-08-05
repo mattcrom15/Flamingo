@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename="styles/styles.css") }}>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap' rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon/Flamingo.ico') }}">
+</head>
+<body>
+    <div style="display: flex;">
+        <div style=" padding-left: 12.5%; width:100%;">
+            <header>
+                <ul class="breadcrumb">
+                    <li><a href = "{{ url_for('home') }}">Home</a></li>
+                    <li>Projects</li>
+                  </ul>
+            </header>
+            <div style="display: flex;  padding-top: 40px; align-items: center;"  >
+                <h1 style="font-size: 48px; padding-left: 45px; margin-right:25px;">Projects</h1>
+                <button class="new_track" id="cpbtn">New Project</button>
+            </div>
+            <div class ="projects-section">
+                {% for a in artist%}
+                <div class = "project" id = "artistid" artistid='{{a[0]}}'>
+                    <div style="margin-bottom: 50px;">
+                        <img src ="{{ url_for('static', filename="icon/edit.svg") }}" height="28" width="28" class="edit-ico-home" onclick="deleteProjectModal(this);">
+                        <img src ="{{ url_for('static', filename="icon/corner-down-right.svg") }}" height="28" width="28" class="export-ico-home" onclick="deleteProjectModal(this);">
+                        <img src ="{{ url_for('static', filename="icon/trash.svg") }}" height="28" width="28" class="trash-ico-home" kind="projectp" onclick="DeleteModal(this);">
+                    </div>
+                    <form action="/dashboard/" method="GET">
+                    <h1 class = "title"><a class = "select_project" href = "{{ url_for('project', artistid= a[0]) }}" id="atitle" style="margin-top:40%;">{{a[1]}}</a></h1>
+                    </form>
+                    <h2 class = "subtitle-projects" id="ttitle">{{a[2]}}</h2>
+                    <div class = "slider-border" id="slider-progress">
+                                <div class = "slider-1" progress="0" style = "width: {{a[5]}}%;"></div>
+                    </div>
+                    {%if a[3] == 1%}
+                    <p class = "completed-list">{{a[4]}} / {{a[3]}} track completed</p>
+                    {%else %}
+                    <p class = "completed-list">{{a[4]}} / {{a[3]}} tracks completed</p>
+                    {%endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class ="side-menu">
+            <ul  class = "side-menu-items">
+                <img src="{{ url_for('static', filename='icon/Flamingo.ico') }}" alt="Flamingo-logo">
+                <li class="side-menu-item"><a class ="sma" href = "{{ url_for('home') }}">Home</a></li>
+                <li class="side-menu-item"><a class ="sma" href = "{{ url_for('index') }}">Projects</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class = "new_project_dialog_modal">
+        <div class = "new_project_dialog">
+            <div class = "close_btn" id="close_btn">+</div>
+            <h1 class = "np_title">Create Project</h1>
+  				    <input class = "np_input1" type="text" id="artist-name" autocomplete="off" placeholder="Artistname">
+  				    <input class = "np_input2" type="text" id="tour-name" autocomplete="off" placeholder="Tour name">
+				    <button class="create_project_btn" onclick="CreateProject();">Create Project</button>
+        </div>
+    </div>
+    <div class = "delete_dialog_modal">
+        <div class = "delete_dialog">
+            <img src ="{{ url_for('static', filename="icon/alert-circle.svg") }}" height="40" width="40" class="del-alert-img">
+            <h1 class = "delete_title">Delete Section</h1>
+            <h2 id="dkind" kind="" aid="" tid="" tsid="" lid="" cid="" style="text-align: center"></h2>
+                    <p class = "delete_msg"></p>
+                    <div class = "btns">
+                        <button class="delete_btn" type="submit" onclick="DeleteElements();" >Delete</button>
+                        <button class="cancel_btn" type="cancelbtn" onclick="closeDelSecModal();" >Cancel</button>
+                    </div>
+        </div>
+    </div>
+
+    <script src = "{{ url_for('static', filename="js/script.js") }}" ></script>
+    <script src = "{{ url_for('static', filename="js/modals.js") }}" ></script>
+    <script src = "{{ url_for('static', filename="js/project.js") }}" ></script>
+</body>
+</html>

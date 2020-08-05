@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{artist[1]}} - {{artist[2]}}</title>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename="styles/styles.css") }}>
+    <link rel="stylesheet" href="{{ url_for('static', filename="styles/croppie.css") }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon/Flamingo.ico') }}">
+</head>
+<body>
+    <div  style="display: flex;">
+        <div style=" padding-left: 12.5%; width:100%;">
+            <header>
+                <ul class="breadcrumb">
+                    <li><a href = "{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('index') }}">Projects</a></li>
+                    <li>{{artist[1]}}</li>
+                  </ul>
+            </header>
+            <div style="display: flex;  padding-top: 20px; background: white; height:210px;" id="artistid" artistid = "{{artist[0]}}">
+                <section>
+                    <h1 style="font-size: 80px; padding-left: 45px; margin-right:25px;" id="atitle">{{artist[1]}}</h1>
+                    <p style="font-size: 40px; padding-left: 45px; margin:0; margin-bottom:30px;" id="ttitle">{{artist[2]}}</p>
+                    <div class = "slider-border" id="slider-progress" style="margin-left: 45px; width:460px;">
+                        <div class = "slider-1" progress="0" style = "width: {{artist[5]}}%;"></div>
+                    </div>
+                </section>
+                <section style="padding-top: 40px; margin-right:15%;">
+                    <div style="display:flex; margin-bottom:101px;">
+                        <img src ="{{ url_for('static', filename="icon/edit.svg") }}" height="24" width="24"  class="section-ico" title = "Edit project"onclick="EditProjectModal();">
+                        <img src ="{{ url_for('static', filename="icon/download.svg") }}" height="24" width="24"  class="section-ico"title = "Export project">
+                        <img src ="{{ url_for('static', filename="icon/trash.svg") }}" height="24" width="24" kind = "project" class="section-ico" title = "Delete project "onclick="DeleteModal(this);">
+                       
+                    </div>
+
+                    {%if artist[3] == 1%}
+                    <p class = "completed-list">{{artist[4]}} / {{artist[3]}} track completed</p>
+                    {%else %}
+                    <p class = "completed-list">{{artist[4]}} / {{artist[3]}} tracks completed</p>
+                    {%endif %}
+                </section>
+                <section style="padding-top: 40px; margin-right:5%;">
+                    <div>
+                        <div style="display: flex;">
+                            <img src ="{{ url_for('static', filename="icon/calendar.svg") }}" height="24" width="24" style="margin-right: 5px;">
+                            <h2>Deadline</h2>
+                        </div>
+                        <p style="padding-left:30px;" id="dline">{{artist[6]}}</p>
+                    </div>
+                    <div>
+                        <div style="display: flex;">
+                            <img src ="{{ url_for('static', filename="icon/film.svg") }}" height="24" width="24" style="margin-right: 5px;">
+                            <h2>Resolution</h2>
+                        </div>
+                        <p style="padding-left:30px;" id="res">{{artist[7]}}</p>
+                    </div>
+                </section>
+                <section style="padding-top: 40px;">
+                    <div>
+                        <div style="display: flex;">
+                            <img src ="{{ url_for('static', filename="icon/calendar.svg") }}" height="24" width="24" style="margin-right: 5px;">
+                            <h2>Framerate</h2>
+                        </div>
+                        <p style="padding-left:30px;"><span id="framerate">{{artist[8]}}</span>fps</p>
+                    </div>
+                    <div>
+                        <p>Download content map</p>
+                    </div>
+                </section>
+            </div>
+            <div style="display: flex;  padding-top: 40px; align-items: center;"  >
+                <h1 style="font-size: 48px; padding-left: 45px; margin-right:25px;">Tracks</h1>
+                <button class="new_project" id="cpbtn">New Track</button>
+            </div>
+            <div class = "projects-section">    
+                    {% for t in track%}
+                    <div class = "track-boxes" id = "trackid" trackid='{{t[0]}}'>
+                        <section class = "track-top">
+                             <div class ="track-image"><img class = "track-image-src" src="{{ url_for('static', filename="images/uploads/"  + t[8]) }}">
+                                <a href = "{{ url_for('track', tid = t[0]) }}">
+                                    {%if t[7] == 100 %}
+                                    <div class = "img-overlay-completed">
+                                        <img src ="{{ url_for('static', filename="icon/check.svg") }}" height="64" width="64">
+                                    </div>
+                                    {% else %}
+                                    <div class = "img-overlay">
+                                        <img src ="{{ url_for('static', filename="icon/edit.svg") }}" height="48" width="48">
+                                    </div>
+                                    {% endif %} 
+                                </a>
+                        </section>
+                        <section class = "track-bottom">
+                            <h1 class = "title-track"><a class = "track-title-dash">{{t[2]}}</a></h1>
+                            <!-- <img src ="{{ url_for('static', filename="icon/edit.svg") }}" height="24" width="24"  class="edit-ico-dash">
+                            <img src ="{{ url_for('static', filename="icon/corner-down-right.svg") }}" height="24" width="24"  class="export-ico-dash">
+                            <img src ="{{ url_for('static', filename="icon/trash.svg") }}" height="24" width="24"  class="trash-ico-dash" kind="trackpd" onclick="DeleteModal(this);"> -->
+                            {% if t[6] == 1 %}
+                                <h1 class = "pending-review">Pending Review</h1>
+                            {% endif%}
+                            {% if t[3] =='High'%}
+                            <h1 class = "priority">Priority: <span class ="priority-high">{{t[3]}}</span></h1>
+                            {% elif t[3] == 'Medium'%}
+                             <h1 class = "priority">Priority: <span class ="priority-medium">{{t[3]}}</span></h1>
+                             {% else %}
+                             <h1 class = "priority">Priority: <span class ="priority-low">{{t[3]}}</span></h1>
+                            {% endif %}
+                            <h1 class = "assigned">Assigned to: {{t[5]}}</h1>
+                            <div class = "slider-border" id="slider-progress" title="{{t[4]}}">
+                                <div class = "slider-1" progress="0" style = "width: {{t[7]}}%;"></div>
+                            </div>
+                        </section>
+                    </div>
+                    {% endfor %}   
+                </div>
+        </div>
+        <div class ="side-menu">
+            <ul  class = "side-menu-items">
+                <img src="{{ url_for('static', filename='icon/Flamingo.ico') }}" alt="Flamingo-logo">
+                <li class="side-menu-item"><a class ="sma" href = "{{ url_for('home') }}">Home</a></li>
+                <li class="side-menu-item"><a class ="sma" href = "{{ url_for('index') }}">Projects</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class = "upload-cover-photo-modal">
+        <div class = "upload-cover-photo-dialog" id="ucp">
+            <div class = "close_btn" id="close_btn_ucp_modal">+</div>
+            <h1>Upload cover photo</h1>
+            <label class="custom-file-label" for="image">Select image...</label>
+            <input type="file" class="image-select-btn" name="image" id="imagefile">
+            <div class="croppy-container" id="cbox" style="height: auto;"></div>
+        </div>
+    </div>
+        <div class = "new_project_dialog_modal">
+            <div class = "new_project_dialog" id="npd">
+                <div class = "close_btn" id="close_btn">+</div>
+                <h1 class = "np_title">Create Tracks</h1>
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <p style="margin:0; padding:0; margin-right: 15px;">Tracks from file</p>
+                    <img src="{{ url_for('static', filename='icon/upload.svg') }}" class="upload-ico" height="24" width="24" title="Tracks from file">
+                </div>
+                <h3>New Tracks</h3>
+                        <p id ="total-tracks-added"> 1/10</p>
+                        <ul class = "track-inputs" id="track-inputs">
+                        <input class = "nt-input" type="text" name="track-name" id="tname"autocomplete="off" placeholder="Trackname">
+                        </ul>
+                        <button class="add_section" type="submit" onclick="add_track();">+</button>
+                        <button class="remove_section" type="submit" onclick="delete_new_track();" >-</button>
+                        <button class="create_track_btn" type="submit" onclick="create_track();">Create Tracks</button>
+            </div>
+        </div>
+        <div class = "delete_dialog_modal">
+            <div class = "delete_dialog">
+                <img src ="{{ url_for('static', filename="icon/alert-circle.svg") }}" height="40" width="40" class="del-alert-img">
+                <h1 class = "delete_title">Delete Section</h1>
+                <h2 id="dkind" kind="" aid="" tid="" tsid="" lid="" cid="" style="text-align: center"></h2>
+                        <p class = "delete_msg"></p>
+                        <div class = "btns">
+                            <button class="delete_btn" type="submit" onclick="DeleteElements();" >Delete</button>
+                            <button class="cancel_btn" type="cancelbtn" onclick="closeDelSecModal();" >Cancel</button>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="edit-project-dialog-modal">
+    <div class="edit-project-dialog">
+        <div class = "close_btn" id="close_btn_ep_modal" onclick="CEPM();">+</div>
+        <h1 style="margin-bottom: 15px;" id="ep-ttitle" epid="{{artist[0]}}">Edit Project </h1>
+        <h3 style="margin-bottom: 5px;">Artist name</h3>
+        <input class="et-input" type="text" name="track-title" id="ainput">
+        <h3 style="margin-bottom: 5px;">Tour name</h3>
+        <input class="et-input" type="text" name="track-title" id="tinput">
+        <h3 style="margin-bottom: 5px;">Deadline</h3>
+        <input class="et-input" type="date" name="Deadline" id="Deadline" value="2020-07-16">
+        <h3 style="margin-bottom: 5px;">Resolution</h3>
+        <div class="" style="display: flex; align-items: center;">
+            <div style="text-align: center;">
+                <p style="padding: 0; margin:0">Width</p>
+            <input class="et-input" style="width: 60px; margin-right: 15px;"="text" name="Width" id="Width">
+            </div>
+            <p style="margin-right: 15px; font-size: 20px;">x</p>
+            <div style="text-align: center;">
+                <p style="padding: 0; margin:0">height</p>
+            <input class="et-input" style="width: 60px;"="text" name="height" id="height">
+            </div>
+        </div>
+        <h3 style="margin-bottom: 5px;">Framerate</h3>
+        <input class="et-input" type="text" name="Framerate" id="Framerate">
+        <button class="create_track_btn" type="submit" onclick="SubmitProjectEdits();">Submit</button>
+    </div>
+</div>
+    <script src = "{{ url_for('static', filename="js/script.js") }}" ></script>
+    <script src = "{{ url_for('static', filename="js/dashboard.js") }}" ></script>
+    <script src = "{{ url_for('static', filename="js/modals.js") }}" ></script>
+    <script src = "{{ url_for('static', filename="js/croppie.js") }}"></script>
+    <script src = "{{ url_for('static', filename="js/matt_crop.js") }}"></script>
+    <script src = "{{ url_for('static', filename="js/uploadimage.js") }}"></script>
+    
+
+</body>
+</html>
+

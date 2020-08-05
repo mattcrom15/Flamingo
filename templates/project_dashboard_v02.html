@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{artist[1]}} - {{artist[2]}}</title>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename="styles/styles.css") }}>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap' rel="stylesheet">
+</head>
+<body>
+    <header>{{artist[1]}} - {{artist[2]}}</header>
+    <div class = "dashboard-top" id = "artistid" artistid = "{{artist[0]}}">
+    	<div class = "section-01">
+    		<h1 class = "title-dash" id="atitle">{{artist[1]}}</h1>
+    		<h2 class = "subtitle-dash" id="ttitle">{{artist[2]}}</h2>
+            <div class="threedots">...</div>
+    	</div>
+    	</div>
+    </div>
+</div>  <div class = "projects-section">    
+            {% for t in track%}
+            <div class = "project" id = "Projectid" projectid='{{t[0]}}'>
+                <div class="threedots" id="project-menu">...</div>
+                <form action="/dashboard/" method="GET">
+                <h1 class = "title"><a class = "select_project" href = "{{ url_for('track', tid = t[0]) }}">{{t[2]}}</a></h1>
+                </form>
+                <div class = "slider-border">
+                    <div class = "slider-colour" progress="{{t[6]}}></div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class = "new_project" id="cpbtn">
+                <h1 class = "plus"><a>+</a><h1>
+            </div>
+        </div>
+        <div class = "new_project_dialog_modal">
+        <div class = "new_project_dialog">
+            <div class = "close_btn" id="close_btn">+</div>
+            <h1 class = "np_title">Create Track</h1>
+                    <h2 class = "np_subtitle">Track name</h2>
+                    <input class = "np_input1" type="text" name="track-name" id="tname"autocomplete="off">
+                    <button class="create_project_btn" type="submit" onclick="create_track();">Create Track</button>
+        </div>
+    </div>
+
+    <script src = "{{ url_for('static', filename="js/script.js") }}" ></script>
+</body>
+</html>

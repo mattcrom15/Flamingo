@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename="styles/styles.css") }}>
+	<link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap' rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='icon/Flamingo.ico') }}">
+</head>
+<body style= "background: url({{ url_for('static', filename='images/login-img.jpg') }});">
+	<div class = "login_modal">
+            <div class = "login_dialog" id="etd">
+				<div>
+				<h1 class = "et_title">Flamingo</h1>
+						<img class = "avatar-large" src="{{ url_for('static', filename='icon/Avatar-basic.png') }}">
+                		<!-- <div class = "avatar-large"></div> -->
+                		<div class = "fields">
+          
+                			<input class = "nt-input" type="text" name="track-name" id="tname"autocomplete="off" placeholder="Username">
+                			<input class = "nt-input" type="text" name="track-name" id="tname"autocomplete="off" placeholder="Password">
+						</div>
+						<div style="display: flex;">
+							<a href = "{{ url_for('index') }}"><button class="create_track_btn" type="submit">Login</button></a>
+							<p>signup</p>
+						</div>
+				</div>
+			</div>
+			<div>
+			</div>
+	</div>
+</body>
