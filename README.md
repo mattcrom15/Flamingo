@@ -11,3 +11,4 @@ Flamingo is web app built for orgainizing Video content production for concerts.
 ## Known Issues
 
 Export as JSON/CSV doesn't work
+
